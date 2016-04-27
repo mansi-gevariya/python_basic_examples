@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - ItemListDb@localhost" uuid="9a67b76d-b8df-4dcc-b14a-d7ff356f079a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="ItemListDb"/>
+      <table id="2" parent="1" name="tblUser"/>
+      <routine id="3" parent="1" name="spCreateUser">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <routine id="4" parent="1" name="sp_AuthenticateUser">
+        <routine-kind>PROCEDURE</routine-kind>
+      </routine>
+      <column id="5" parent="2" name="UserId">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="6" parent="2" name="UserName">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="7" parent="2" name="Password">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="8" parent="2" name="PRIMARY">
+        <columns>UserId</columns>
+        <primary>1</primary>
+      </key>
+      <argument id="9" parent="3" name="p_Username">
+        <direction>IN</direction>
+        <data-type>varchar(50)</data-type>
+      </argument>
+      <argument id="10" parent="3" name="p_Password">
+        <direction>IN</direction>
+        <data-type>varchar(50)</data-type>
+      </argument>
+      <argument id="11" parent="4" name="p_username">
+        <direction>IN</direction>
+        <data-type>varchar(20)</data-type>
+      </argument>
+    </database-model>
+  </data-source>
+</component>
